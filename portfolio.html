@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Edilan Pereira</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="portifolio.css" />
+</head>
+<body>
+<div class="container" id="menu"></div>
+
+  <div class="container mt-5">
+    <div class="bg-white p-4 rounded">
+
+        <section id="projetos">
+          <h2>Projetos</h2>
+          <div class="projeto">
+            <h3>To-do List</h3>
+            <p>Uma aplicação de tarefas simples feita com HTML, CSS e JavaScript.</p>
+            <a href="https://github.com/Edilan15" target="_blank">Ver no GitHub</a>
+          </div>
+        </section>
+    </div>
+    </div>
+<script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

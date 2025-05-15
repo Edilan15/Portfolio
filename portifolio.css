@@ -8,8 +8,8 @@ body {
 
 .navbar{
 background-color: #333;
-height: 100px;
-top: 35px;  
+height: 125px;
+top: 30px;  
 }
 
 .navbar a{
@@ -28,7 +28,11 @@ top: 35px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.sobre{
+  top: 40px;  
+background-color: #fff;
 
+}
 
 header, section, footer {
   padding: 20px;
