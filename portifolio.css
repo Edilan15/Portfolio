@@ -1,64 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #869de7;
-  color: #333;
+    font-family: 'Inter', 'Arial', sans-serif;
+  background-color: #0D0D0D;
+  color: #FFFFFF;
   margin: 0;
   padding: 0;
 }
 
-.navbar{
-background-color: #333;
-height: 125px;
-top: 3px;  
-}
-
-.navbar a{
+.navbar-personalizada {
+  background-color: #1F1F1F;
+  height: 125px;
+  top: 3px;
   color: white;
 }
 
-
 .foto-perfil {
-  width: 250px;            
-  height: 250px;
-  object-fit: cover;      
-  border-radius: 50%;      
-  position: absolute;     
-  top: 70px;             
-  right: 30px;             
+  width: 200px;   
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.sobre{
+.sobre {
   top: 40px;  
-background-color: #fff;
-
-}
-
-header, section, footer {
+  background-color:black;
+  color: black;
+  border-radius: 8px;
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
 }
+
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #1F1F1F;
+  color: #1F1F1F;
   text-align: center;
+  border-bottom: 1px solid #3E8EDE;
 }
 
 #projetos .projeto {
-  background-color: #fff;
+  background-color: #FFFFFF;
+  color: #1F1F1F;
   padding: 15px;
   margin: 10px 0;
-  border-left: 5px solid #00bcd4;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-left: 5px solid #3E8EDE;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
 }
 
-a {
-  color: #00bcd4;
+.a {
+  color: #3E8EDE;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #2F6DB7;
+}
+.bg-white {
+  background-color: #1F1F1F !important;
 }
