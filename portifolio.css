@@ -21,15 +21,22 @@ html, body {
   color: white;
 }
 
+
+
 .foto-perfil {
-  width: 200px;   
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
+  border: 3px solid #00BFFF;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 3px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease-in-out;
 }
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
 
 .sobre {
   top: 40px;  
@@ -70,6 +77,14 @@ a:hover {
 .bg-white {
   background-color: #1F1F1F !important;
 }
+
+.redes-sociais a {
+  color: #00BFFF;
+  font-size: 35px;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+
 
 .footer{
  top: 100px;
