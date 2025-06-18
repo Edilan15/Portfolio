@@ -46,6 +46,24 @@ html, body {
   padding: 20px;
 }
 
+.btn-contato {
+  background-color: transparent;
+  color:  #3E8EDE;
+  border: 2px solid #3E8EDE;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-contato:hover {
+  background-color: #0d6efd;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+}
+
+
 
 header {
   background-color: #1F1F1F;
@@ -78,12 +96,65 @@ a:hover {
   background-color: #1F1F1F !important;
 }
 
+.navbar-nav .nav-link {
+  font-size: 25px; 
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #3E8EDE !important; 
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+.navbar .navbar-brand {
+  color: #00BFFF !important; 
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+  color: white !important; 
+}
+
+
+
 .redes-sociais a {
-  color: #00BFFF;
+  color: #00BFFF !important;
   font-size: 35px;
   transition: 0.3s;
   margin-right: 15px;
 }
+
+.redes-sociais a:hover {
+  color: white !important; 
+}
+
+.icones-tecnologias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px; 
+  margin-top: 30px;
+}
+
+.icones-tecnologias i {
+  font-size: 65px;
+  transition: transform 0.3s ease;
+}
+
+.icones-tecnologias i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
 
 
 .footer{
