@@ -10,6 +10,16 @@ html, body {
   color: #FFFFFF;
 }
 
+.menu {
+  position: relative; 
+  display: none;
+}
+
+.menu.open {
+  display: block;
+}
+
+
 
 .main-content {
   flex: 1;
