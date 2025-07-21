@@ -2,107 +2,267 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio - Edilan Pereira</title>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="portifolio.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
+  <!-- CSS e Fontes -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <style>
+    /* Seu CSS unificado aqui */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', 'Arial', sans-serif;
+      background-color: #0D0D0D;
+      color: #FFFFFF;
+    }
+
+    .spa-section {
+      display: none;
+    }
+
+    .spa-section.active {
+      display: block;
+    }
+
+    .navbar-toggler {
+      border: none;
+      outline: none;
+      box-shadow: none !important;
+    }
+
+    .navbar-personalizada {
+      background-color: #1F1F1F !important;
+      height: 125px;
+      top: 0px;
+      color: white;
+    }
+
+    .foto-perfil {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 3px solid #00BFFF;
+      border-radius: 50%;
+      padding: 3px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .foto-perfil:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-contato {
+      background-color: transparent;
+      color: #3E8EDE;
+      border: 2px solid #3E8EDE;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contato:hover {
+      background-color: #0d6efd;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 25px;
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #3E8EDE !important;
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 20px;
+    }
+
+    .navbar .navbar-brand {
+      color: #00BFFF !important;
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .navbar-brand:hover {
+      color: white !important;
+    }
+
+    .redes-sociais a {
+      color: #00BFFF !important;
+      font-size: 35px;
+      transition: 0.3s;
+      margin-right: 15px;
+    }
+
+    .redes-sociais a:hover {
+      color: white !important;
+    }
+
+    .icones-tecnologias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .icones-tecnologias i {
+      font-size: 65px;
+      transition: transform 0.3s ease;
+    }
+
+    .icones-tecnologias i:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #888;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container" id="menu"></div>
-    
-<div class="container mt-5">
-  <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
-    <div class="row align-items-center">
-      <div class="col-sm-9 pag">
-        <h2 data-aos="fade-right">Olá, eu sou Edilan Pereira</h2>
-        <br>
-        <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-  Desenvolvedor Full Stack
-</h1>
-        <br>
-        <button type="button" class="btn btn-contato" onclick="location.href='contato.html'">Entre em Contato</button>
-
-       <div class="redes-sociais mt-3" data-aos="zoom-in">
-    <a href="https://github.com/Edilan15" target="_blank" title="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/edilan-pereira-5a8175243/" target="_blank" title="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="mailto:edilanpereira1511@gmail.com" title="E-mail">
-
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://wa.me/5561982199515" target="_blank" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
-
+  <!-- Navbar -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark rounded mt-4 navbar-personalizada px-3">
+          <a class="navbar-brand" href="#home" onclick="navigateSPA('home')">&lt; / E . P &gt;</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <i class="fas fa-bars text-white fa-2x"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item mx-3"><a class="nav-link" href="#home" onclick="navigateSPA('home')">Home</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="#sobre" onclick="navigateSPA('sobre')">Sobre</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="#skills" onclick="navigateSPA('skills')">Skills</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="#projetos" onclick="navigateSPA('projetos')">Portfólio</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="#contato" onclick="navigateSPA('contato')">Contato</a></li>
+            </ul>
+            <div class="redes-sociais ml-4 d-flex align-items-center">
+              <a href="https://github.com/Edilan15" target="_blank" title="GitHub" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+              <a href="https://www.instagram.com/seuusuario" target="_blank" title="Instagram" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+          </div>
+        </nav>
       </div>
-
-
-
-      <div class="col-sm-3 text-center">
-       
-         <img src="./img/perfil.png" class="foto-perfil" alt="Foto de perfil">
-      </div>
-      
     </div>
   </div>
-</div>
 
-  <div class="container mt-5">
-  <div class="p-4 rounded text-white" style="background-color: #1f1f1f;">
-    <section id="sobre">
-     <h1>Sobre mim</h1> 
-     <br>
-    <h3>Olá! Sou Edilan Pereira, desenvolvedor Full Stack com conhecimentos em HTML, CSS, JavaScript, PHP e banco de dados MySQL. Estou sempre me aprimorando e buscando aprender novas tecnologias para entregar projetos funcionais e modernos.</h3>
-    </section>
-  </div>
-</div>
+  <!-- Seções SPA -->
 
- <div class="container mt-5">
-  <div class="p-4 rounded text-white" style="background-color: #1f1f1f;">
-    <section id="linguagem">
-      
-       <div class="icones-tecnologias mt-4">
-  <i class="devicon-html5-plain colored" title="HTML5"></i>
-  <i class="devicon-css3-plain colored" title="CSS3"></i>
-  <i class="devicon-javascript-plain colored" title="JavaScript"></i>
-  <i class="devicon-php-plain colored" title="PHP"></i>
-  <i class="devicon-mysql-plain colored" title="MySQL"></i>
-</div>
+  <section id="home" class="spa-section active">
+    <div class="container mt-5">
+      <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
+        <div class="row align-items-center">
+          <div class="col-sm-9">
+            <h2>Olá, eu sou Edilan Pereira</h2>
+            <h1>Desenvolvedor Full Stack</h1>
+            <button type="button" class="btn btn-contato mt-3" onclick="navigateSPA('contato')">Entre em Contato</button>
+            <div class="redes-sociais mt-4">
+              <a href="https://github.com/Edilan15" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/edilan-pereira-5a8175243/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:edilanpereira1511@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+              <a href="https://wa.me/5561982199515" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-3 text-center">
+            <img src="./img/perfil.png" class="foto-perfil" alt="Foto de perfil" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
-  </div>
-</div>
-    
+  <section id="sobre" class="spa-section">
+    <div class="container mt-5">
+      <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor em formação pelo Instituto Master EAD. Apaixonado por tecnologia e buscando minha primeira oportunidade na área de programação.</p>
+      </div>
+    </div>
+  </section>
 
-      <p class="footer">&copy; 2025 Edilan Pereira. Todos os direitos reservados.</p> 
-      
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <section id="skills" class="spa-section">
+    <div class="container mt-5">
+      <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
+        <h2>Minhas Skills</h2>
+        <div class="icones-tecnologias mt-4">
+          <i class="devicon-html5-plain colored" title="HTML5"></i>
+          <i class="devicon-css3-plain colored" title="CSS3"></i>
+          <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+          <i class="devicon-php-plain colored" title="PHP"></i>
+          <i class="devicon-mysql-plain colored" title="MySQL"></i>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="projetos" class="spa-section">
+    <div class="container mt-5">
+      <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
+        <h2>Projetos</h2>
+        <p>Aqui em breve você poderá ver meus projetos pessoais e profissionais com links e descrições.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="spa-section">
+    <div class="container mt-5">
+      <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
+        <h2>Contato</h2>
+        <p>Você pode entrar em contato comigo por e-mail, WhatsApp ou LinkedIn. Estou disponível para conversar sobre oportunidades e colaborações!</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="footer">&copy; 2025 Edilan Pereira. Todos os direitos reservados.</p>
+
+  <!-- JS SPA Navigation -->
   <script>
-    fetch('menu.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu').innerHTML = data;
-      })
-      .catch(error => console.error('Erro ao carregar o menu:', error));
+    function navigateSPA(sectionId) {
+      const sections = document.querySelectorAll('.spa-section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.classList.add('active');
+        history.pushState(null, '', '#' + sectionId);
+      }
+    }
+
+    window.addEventListener('load', () => {
+      const current = location.hash.replace('#', '') || 'home';
+      navigateSPA(current);
+    });
+
+    window.addEventListener('popstate', () => {
+      const current = location.hash.replace('#', '') || 'home';
+      navigateSPA(current);
+    });
   </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
