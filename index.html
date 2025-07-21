@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="portifolio.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
 </head>
 <body>
 
@@ -18,13 +20,15 @@
   <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
     <div class="row align-items-center">
       <div class="col-sm-9 pag">
-        <h2>Olá, eu sou Edilan Pereira</h2>
+        <h2 data-aos="fade-right">Olá, eu sou Edilan Pereira</h2>
         <br>
-        <h1>Desenvolvedor Full Stack</h1>
+        <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+  Desenvolvedor Full Stack
+</h1>
         <br>
         <button type="button" class="btn btn-contato" onclick="location.href='contato.html'">Entre em Contato</button>
 
-       <div class="redes-sociais mt-3">
+       <div class="redes-sociais mt-3" data-aos="zoom-in">
     <a href="https://github.com/Edilan15" target="_blank" title="GitHub">
       <i class="fab fa-github"></i>
     </a>
@@ -95,6 +99,11 @@
       })
       .catch(error => console.error('Erro ao carregar o menu:', error));
   </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
 
