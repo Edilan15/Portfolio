@@ -5,30 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio - Edilan Pereira</title>
 
-  <!-- CSS e Fontes -->
+  <!-- Fontes e ícones -->
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   <style>
-    /* Seu CSS unificado aqui */
     html, body {
+      padding-top: 70px;
       margin: 0;
       padding: 0;
+      height: 100%;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      overflow-y: scroll;
       font-family: 'Inter', 'Arial', sans-serif;
       background-color: #0D0D0D;
       color: #FFFFFF;
-      scroll-behavior: smooth;
-       scroll-snap-type: y mandatory;
-      overflow-y: scroll;
     }
 
-   .spa-section {
-  min-height: 100vh;
+
+    .spa-section {
+  height: 100vh;
   scroll-snap-align: start;
-  scroll-padding-top: 125px; /* altura da navbar */
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* mesmo ou um pouco mais que a navbar */
+  box-sizing: border-box;
 }
+
+
+
+  .navbar {
+  background-color: #1F1F1F !important;
+  height: 70px;
+  padding: 0 30px;
+  color: white;
+  /* position: fixed; já aplicado pela classe fixed-top do Bootstrap */
+  z-index: 1030; /* para ficar sobre outros elementos */
+}
+
+
 
 
     .navbar-toggler {
@@ -37,11 +55,41 @@
       box-shadow: none !important;
     }
 
-    .navbar-personalizada {
-      background-color: #1F1F1F !important;
-      height: 125px;
-      top: 0px;
-      color: white;
+    .navbar .navbar-brand {
+      color: #00BFFF !important;
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .navbar-brand:hover {
+      color: white !important;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 25px;
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #3E8EDE !important;
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 20px;
+    }
+
+    .redes-sociais a {
+      color: #00BFFF !important;
+      font-size: 35px;
+      transition: 0.3s;
+      margin-right: 15px;
+    }
+
+    .redes-sociais a:hover {
+      color: white !important;
     }
 
     .foto-perfil {
@@ -76,72 +124,6 @@
       box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
     }
 
-    .navbar-nav .nav-link {
-      font-size: 25px;
-      color: white !important;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #3E8EDE !important;
-    }
-
-    .navbar-nav .nav-item {
-      margin-right: 20px;
-    }
-
-    .navbar .navbar-brand {
-      color: #00BFFF !important;
-      font-family: 'Pacifico', cursive;
-      font-size: 32px;
-      transition: color 0.3s ease;
-    }
-
-    .navbar .navbar-brand:hover {
-      color: white !important;
-    }
-
-
-/* Permite scroll horizontal no menu em telas pequenas */
-@media (max-width: 768px) {
-  .navbar-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-
-  .navbar-nav .nav-item {
-    flex: 0 0 auto;
-  }
-
-  .navbar {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-}
-
-.navbar-nav {
-  scrollbar-width: thin;
-  scrollbar-color: #00BFFF transparent;
-  padding-bottom: 5px;
-}
-
-
-
-
-    .redes-sociais a {
-      color: #00BFFF !important;
-      font-size: 35px;
-      transition: 0.3s;
-      margin-right: 15px;
-    }
-
-    .redes-sociais a:hover {
-      color: white !important;
-    }
-
     .icones-tecnologias {
       display: flex;
       justify-content: center;
@@ -166,54 +148,77 @@
       text-align: center;
       color: #888;
     }
+
+    @media (max-width: 768px) {
+      .navbar-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .navbar-nav .nav-item {
+        flex: 0 0 auto;
+      }
+    }
+
+    .navbar-nav {
+      scrollbar-width: thin;
+      scrollbar-color: #00BFFF transparent;
+      padding-bottom: 5px;
+    }
   </style>
 </head>
 
 <body>
 
   <!-- Navbar -->
+<!-- Navbar sem fixed -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1F1F1F;">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark rounded mt-4 navbar-personalizada px-3">
-          <a class="navbar-brand" href="#home" onclick="navigateSPA('home')">&lt; / E . P &gt;</a>
-
-          
-<div class="navbar-collapse justify-content-end d-flex">
-  <ul class="navbar-nav d-flex flex-nowrap overflow-auto">
-
-
-              <li class="nav-item mx-3"><a class="nav-link" href="#" onclick="navigateSPA('home'); return false;">Home</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="#sobre" onclick="navigateSPA('sobre')">Sobre</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="#skills" onclick="navigateSPA('skills')">Skills</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="#projetos" onclick="navigateSPA('projetos')">Portfólio</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="#contato" onclick="navigateSPA('contato')">Contato</a></li>
-            </ul>
-            <div class="redes-sociais ml-4 d-flex align-items-center">
-              <a href="https://github.com/Edilan15" target="_blank" title="GitHub" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
-              <a href="https://www.instagram.com/seuusuario" target="_blank" title="Instagram" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-            </div>
-          </div>
-        </nav>
+    <a class="navbar-brand" href="#home">&lt; / E . P &gt;</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav d-flex flex-nowrap overflow-auto">
+        <li class="nav-item mx-3"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="#projetos">Portfólio</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+      <div class="redes-sociais ml-4 d-flex align-items-center">
+        <a href="https://github.com/Edilan15" target="_blank" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.instagram.com/seuusuario" target="_blank" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
       </div>
     </div>
   </div>
+</nav>
+</div>
+</div>
+</div>
 
-  <!-- Seções SPA -->
 
-  <section id="home" class="spa-section active">
-    <div class="container mt-5">
+  <!-- Seções -->
+  <section id="home" class="spa-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
       <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
         <div class="row align-items-center">
           <div class="col-sm-9">
             <h2>Olá, eu sou Edilan Pereira</h2>
             <h1>Desenvolvedor Full Stack</h1>
-            <button type="button" class="btn btn-contato mt-3" onclick="navigateSPA('contato')">Entre em Contato</button>
+            <a href="#contato" class="btn btn-contato mt-3">Entre em Contato</a>
             <div class="redes-sociais mt-4">
-              <a href="https://github.com/Edilan15" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/edilan-pereira-5a8175243/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:edilanpereira1511@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
-              <a href="https://wa.me/5561982199515" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://github.com/Edilan15" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/edilan-pereira-5a8175243/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:edilanpereira1511@gmail.com"><i class="fas fa-envelope"></i></a>
+              <a href="https://wa.me/5561982199515" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
           <div class="col-sm-3 text-center">
@@ -222,10 +227,12 @@
         </div>
       </div>
     </div>
+    </div>
+    </div>
   </section>
 
   <section id="sobre" class="spa-section">
-    <div class="container mt-5">
+    <div class="container">
       <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
         <h2>Sobre Mim</h2>
         <p>Sou um desenvolvedor em formação pelo Instituto Master EAD. Apaixonado por tecnologia e buscando minha primeira oportunidade na área de programação.</p>
@@ -234,7 +241,7 @@
   </section>
 
   <section id="skills" class="spa-section">
-    <div class="container mt-5">
+    <div class="container">
       <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
         <h2>Minhas Skills</h2>
         <div class="icones-tecnologias mt-4">
@@ -249,16 +256,16 @@
   </section>
 
   <section id="projetos" class="spa-section">
-    <div class="container mt-5">
+    <div class="container">
       <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
         <h2>Projetos</h2>
-        <p>Aqui em breve você poderá ver meus projetos pessoais e profissionais com links e descrições.</p>
+        <p>Em breve você poderá ver meus projetos pessoais e profissionais com links e descrições.</p>
       </div>
     </div>
   </section>
 
   <section id="contato" class="spa-section">
-    <div class="container mt-5">
+    <div class="container">
       <div class="p-4 rounded text-white" style="background-color: #1F1F1F;">
         <h2>Contato</h2>
         <p>Você pode entrar em contato comigo por e-mail, WhatsApp ou LinkedIn. Estou disponível para conversar sobre oportunidades e colaborações!</p>
@@ -268,34 +275,9 @@
 
   <p class="footer">&copy; 2025 Edilan Pereira. Todos os direitos reservados.</p>
 
-  <!-- JS SPA Navigation -->
-  <script>
-    function navigateSPA(sectionId) {
-      const sections = document.querySelectorAll('.spa-section');
-      sections.forEach(section => section.classList.remove('active'));
-
-      const target = document.getElementById(sectionId);
-      if (target) {
-        target.classList.add('active');
-        history.pushState(null, '', '#' + sectionId);
-      }
-    }
-
-    window.addEventListener('load', () => {
-      const current = location.hash.replace('#', '') || 'home';
-      navigateSPA(current);
-    });
-
-    window.addEventListener('popstate', () => {
-      const current = location.hash.replace('#', '') || 'home';
-      navigateSPA(current);
-    });
-  </script>
-
   <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
