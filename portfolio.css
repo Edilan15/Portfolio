@@ -15,7 +15,7 @@ body {
   background-color: #121212;
   color: white;
   font-family: Arial, sans-serif;
-  padding-top: 70px; /* Evita que o conteúdo fique atrás da navbar fixa */
+  padding-top: 20px; /* Evita que o conteúdo fique atrás da navbar fixa */
 }
 
 .spa-section {
