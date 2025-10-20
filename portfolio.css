@@ -33,6 +33,36 @@ body {
   padding: 40px;
 }
 
+#contato .container {
+  display: flex;
+  flex-direction: column; /* mantém título e texto em cima e ícones embaixo */
+  align-items: center;    /* centraliza horizontalmente */
+  gap: 20px;              /* espaço vertical entre título/texto e ícones */
+}
+
+#contato .container a {
+  color: white;
+  font-size: 2rem;       /* tamanho dos ícones */
+  margin: 0 10px;        /* espaço horizontal entre os ícones */
+  transition: color 0.3s;
+}
+
+#contato .container a:hover {
+  color: #ff4757;        /* cor hover vermelha */
+}
+
+/* Agrupa os ícones em uma linha */
+#contato .container a:first-child {
+  margin-left: 0;
+}
+
+#contato .redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;             /* espaço entre cada ícone */
+}
+
+
 /* ===========================
    TÍTULOS
 =========================== */
